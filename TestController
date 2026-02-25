@@ -2,29 +2,37 @@
 package com.book.control;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model; 
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class TestController {
-	/*
+	
 	@GetMapping("/enter")
 	public String userEner() {
 		return "test2.html";
 	}
-	*/
+
+//------------------------------------------------
+
 	@GetMapping("/home")
 	public String home() {
 		return "index";
 	}
 	
+
+//------------------------------------------------
+
+    // 1. Model 방식 (데이터만 담고 뷰 이름은 String 리턴)
+    @GetMapping("/home")
+    public String home(Model model) {
+        model.addAttribute("name", "이순신");
+        return "index"; 
+    }
 }
 
-//스프링에서는 서블릿 클래스라고 직접 만들지 않음
-//기본의 서블릿 클래스의 역활이 주소 매핑
 
-//서블릿 클래스와 같은 주소 매칭하고 해당주소에 페이지를 제공하는 방법은
-//일반 클래스 생성 후
-
+}
 
 [application.properties] 설정
 spring.application.name=book
