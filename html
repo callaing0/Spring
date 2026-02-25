@@ -8,11 +8,7 @@
     <h1>나는 index</h1>
     
     <h3 th:text="${name}"></h3>
-    <hr>
     
-    <p>로컬스토리지 이름: <span id="storage-name"></span></p>
-    <p>로컬스토리지 나이: <span id="storage-age"></span></p>
-
     <script>
         // 로컬스토리지에 저장
         localStorage.setItem("name", "김유신");
@@ -21,6 +17,12 @@
         // 로컬스토리지에서 가져오기
         let myName = localStorage.getItem("name");
         let myAge = localStorage.getItem("age");
+        
+        //삭제하는 방법
+        //localStorage.removeItem
+        
+        //전체 삭제
+        //localStorage.clear();
 
     </script>
 </body>
