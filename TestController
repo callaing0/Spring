@@ -1,0 +1,32 @@
+[TestController.java]
+package com.book.control;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class TestController {
+	/*
+	@GetMapping("/enter")
+	public String userEner() {
+		return "test2.html";
+	}
+	*/
+	@GetMapping("/")
+	public String home() {
+		return "index,html";
+	}
+	
+}
+
+[application.properties] 설정
+spring.application.name=book
+server.port=80
+
+#thymeleaf set
+spring.thymeleaf.prefix=classpath:/templates/
+spring.thymeleaf.suffix=.html
+spring.thymeleaf.cache=false
+
+
+[pom.xml]의 <dependencies> 하단에 추가
