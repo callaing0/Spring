@@ -1,0 +1,6 @@
+//Model, MedelAndView
+//Model은 데이터만 담아주는 역활
+//MedelAndView는 데이터와 페이지를 담아두는 역활
+
+//MedelAndView를 사용하면 디스패쳐서블릿에서 그냥 사용하지만
+//Model은 사용하면 디스패쳐서블릿이 Model의 데이터와 return의 View를 합쳐서 MedelAndView로 변환
