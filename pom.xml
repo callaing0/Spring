@@ -1,0 +1,6 @@
+<dependencies> 내용 하단에 추가
+
+  dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
