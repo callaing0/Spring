@@ -31,11 +31,16 @@ public class TestController {
 
 //------------------------------------------------
 
- @GetMapping("/freeboard") // 주소창에 입력할 경로
-	    public String freeboard(Model model) {
+		@Autowired
+		private BoardRepository boardRepository;
+		
+	    @GetMapping("/freeboard") // 주소창에 입력할 경로
+	    public String bb(Model model) {
 	    	
 	    	//게시판 목록을 보여주기 위해 DB에 퀴리문을 주고 결과 받기
 	    	//회원가입을 하기 위해 아아디가 중복인지 확인
+	    	List<Board> list = boardRepository.findAll();
+	        model.addAttribute("list", list);
 	    	
 	        return "freeboard";  
 	    }
