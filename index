@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> 
+<head>
+    <meta charset="UTF-8">
+    <title>Index Page</title>
+</head>
+<body>
+    <h1>나는 index</h1>
+    
+    <h3 th:text="${name}"></h3>
+    
+    <script>
+        // 로컬스토리지에 저장
+        localStorage.setItem("name", "김유신");
+        localStorage.setItem("age", "15");
+
+        // 로컬스토리지에서 가져오기
+        let myName = localStorage.getItem("name");
+        let myAge = localStorage.getItem("age");
+        
+        //삭제하는 방법
+        //localStorage.removeItem
+        
+        //전체 삭제
+        //localStorage.clear();
+
+    </script>
+</body>
+</html>
